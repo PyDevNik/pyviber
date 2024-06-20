@@ -1,0 +1,2 @@
+class RichMediaMessage:
+    raise NotImplementedError
