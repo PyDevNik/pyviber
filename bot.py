@@ -42,6 +42,7 @@ class Bot:
                 "name": sender.name,
                 "avatar": sender.avatar
             },
+            "keyboard": message.keyboard,
             "tracking_data": message.tracking_data
         }
 
