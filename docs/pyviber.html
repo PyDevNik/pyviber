@@ -1,0 +1,1101 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>pyviber package &mdash; pyviber 0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=2709fde1"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            pyviber
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">pyviber package</a><ul>
+<li><a class="reference internal" href="#subpackages">Subpackages</a></li>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-pyviber.bot">pyviber.bot module</a><ul>
+<li><a class="reference internal" href="#pyviber.bot.Bot"><code class="docutils literal notranslate"><span class="pre">Bot</span></code></a><ul>
+<li><a class="reference internal" href="#pyviber.bot.Bot.event"><code class="docutils literal notranslate"><span class="pre">Bot.event()</span></code></a></li>
+<li><a class="reference internal" href="#pyviber.bot.Bot.get_account_info"><code class="docutils literal notranslate"><span class="pre">Bot.get_account_info()</span></code></a></li>
+<li><a class="reference internal" href="#pyviber.bot.Bot.get_online"><code class="docutils literal notranslate"><span class="pre">Bot.get_online()</span></code></a></li>
+<li><a class="reference internal" href="#pyviber.bot.Bot.get_user_details"><code class="docutils literal notranslate"><span class="pre">Bot.get_user_details()</span></code></a></li>
+<li><a class="reference internal" href="#pyviber.bot.Bot.handle_event"><code class="docutils literal notranslate"><span class="pre">Bot.handle_event()</span></code></a></li>
+<li><a class="reference internal" href="#pyviber.bot.Bot.send_message"><code class="docutils literal notranslate"><span class="pre">Bot.send_message()</span></code></a></li>
+<li><a class="reference internal" href="#pyviber.bot.Bot.set_webhook"><code class="docutils literal notranslate"><span class="pre">Bot.set_webhook()</span></code></a></li>
+<li><a class="reference internal" href="#pyviber.bot.Bot.unset_webhook"><code class="docutils literal notranslate"><span class="pre">Bot.unset_webhook()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-pyviber.bot_info">pyviber.bot_info module</a><ul>
+<li><a class="reference internal" href="#pyviber.bot_info.BotInfo"><code class="docutils literal notranslate"><span class="pre">BotInfo</span></code></a><ul>
+<li><a class="reference internal" href="#pyviber.bot_info.BotInfo.background"><code class="docutils literal notranslate"><span class="pre">BotInfo.background</span></code></a></li>
+<li><a class="reference internal" href="#pyviber.bot_info.BotInfo.country"><code class="docutils literal notranslate"><span class="pre">BotInfo.country</span></code></a></li>
+<li><a class="reference internal" href="#pyviber.bot_info.BotInfo.icon"><code class="docutils literal notranslate"><span class="pre">BotInfo.icon</span></code></a></li>
+<li><a class="reference internal" href="#pyviber.bot_info.BotInfo.id"><code class="docutils literal notranslate"><span class="pre">BotInfo.id</span></code></a></li>
+<li><a class="reference internal" href="#pyviber.bot_info.BotInfo.name"><code class="docutils literal notranslate"><span class="pre">BotInfo.name</span></code></a></li>
+<li><a class="reference internal" href="#pyviber.bot_info.BotInfo.uri"><code class="docutils literal notranslate"><span class="pre">BotInfo.uri</span></code></a></li>
+<li><a class="reference internal" href="#pyviber.bot_info.BotInfo.webhook"><code class="docutils literal notranslate"><span class="pre">BotInfo.webhook</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-pyviber.error_codes">pyviber.error_codes module</a><ul>
+<li><a class="reference internal" href="#pyviber.error_codes.ApiVersionNotSupportedError"><code class="docutils literal notranslate"><span class="pre">ApiVersionNotSupportedError</span></code></a></li>
+<li><a class="reference internal" href="#pyviber.error_codes.BadDataError"><code class="docutils literal notranslate"><span class="pre">BadDataError</span></code></a></li>
+<li><a class="reference internal" href="#pyviber.error_codes.BroadcastNotAllowedError"><code class="docutils literal notranslate"><span class="pre">BroadcastNotAllowedError</span></code></a></li>
+<li><a class="reference internal" href="#pyviber.error_codes.CannotSendBroadcastError"><code class="docutils literal notranslate"><span class="pre">CannotSendBroadcastError</span></code></a></li>
+<li><a class="reference internal" href="#pyviber.error_codes.ErrorCode"><code class="docutils literal notranslate"><span class="pre">ErrorCode</span></code></a><ul>
+<li><a class="reference internal" href="#pyviber.error_codes.ErrorCode.ApiVersionNotSupportedError"><code class="docutils literal notranslate"><span class="pre">ErrorCode.ApiVersionNotSupportedError</span></code></a></li>
+<li><a class="reference internal" href="#pyviber.error_codes.ErrorCode.BadDataError"><code class="docutils literal notranslate"><span class="pre">ErrorCode.BadDataError</span></code></a></li>
+<li><a class="reference internal" href="#pyviber.error_codes.ErrorCode.BroadcastNotAllowedError"><code class="docutils literal notranslate"><span class="pre">ErrorCode.BroadcastNotAllowedError</span></code></a></li>
+<li><a class="reference internal" href="#pyviber.error_codes.ErrorCode.CannotSendBroadcastError"><code class="docutils literal notranslate"><span class="pre">ErrorCode.CannotSendBroadcastError</span></code></a></li>
+<li><a class="reference internal" href="#pyviber.error_codes.ErrorCode.FreeMessagesExceededError"><code class="docutils literal notranslate"><span class="pre">ErrorCode.FreeMessagesExceededError</span></code></a></li>
+<li><a class="reference internal" href="#pyviber.error_codes.ErrorCode.GeneralError"><code class="docutils literal notranslate"><span class="pre">ErrorCode.GeneralError</span></code></a></li>
+<li><a class="reference internal" href="#pyviber.error_codes.ErrorCode.InchatReplyMessageNotAllowedError"><code class="docutils literal notranslate"><span class="pre">ErrorCode.InchatReplyMessageNotAllowedError</span></code></a></li>
+<li><a class="reference internal" href="#pyviber.error_codes.ErrorCode.IncompatibleWithVersionError"><code class="docutils literal notranslate"><span class="pre">ErrorCode.IncompatibleWithVersionError</span></code></a></li>
+<li><a class="reference internal" href="#pyviber.error_codes.ErrorCode.InvalidAuthTokenError"><code class="docutils literal notranslate"><span class="pre">ErrorCode.InvalidAuthTokenError</span></code></a></li>
+<li><a class="reference internal" href="#pyviber.error_codes.ErrorCode.InvalidUrlError"><code class="docutils literal notranslate"><span class="pre">ErrorCode.InvalidUrlError</span></code></a></li>
+<li><a class="reference internal" href="#pyviber.error_codes.ErrorCode.MissingDataError"><code class="docutils literal notranslate"><span class="pre">ErrorCode.MissingDataError</span></code></a></li>
+<li><a class="reference internal" href="#pyviber.error_codes.ErrorCode.NoBalanceError"><code class="docutils literal notranslate"><span class="pre">ErrorCode.NoBalanceError</span></code></a></li>
+<li><a class="reference internal" href="#pyviber.error_codes.ErrorCode.NoPublicChatError"><code class="docutils literal notranslate"><span class="pre">ErrorCode.NoPublicChatError</span></code></a></li>
+<li><a class="reference internal" href="#pyviber.error_codes.ErrorCode.PaymentUnsupportedError"><code class="docutils literal notranslate"><span class="pre">ErrorCode.PaymentUnsupportedError</span></code></a></li>
+<li><a class="reference internal" href="#pyviber.error_codes.ErrorCode.PublicAccountBlockedError"><code class="docutils literal notranslate"><span class="pre">ErrorCode.PublicAccountBlockedError</span></code></a></li>
+<li><a class="reference internal" href="#pyviber.error_codes.ErrorCode.PublicAccountIsNotInlineError"><code class="docutils literal notranslate"><span class="pre">ErrorCode.PublicAccountIsNotInlineError</span></code></a></li>
+<li><a class="reference internal" href="#pyviber.error_codes.ErrorCode.PublicAccountNotAuthorizedError"><code class="docutils literal notranslate"><span class="pre">ErrorCode.PublicAccountNotAuthorizedError</span></code></a></li>
+<li><a class="reference internal" href="#pyviber.error_codes.ErrorCode.PublicAccountNotFoundError"><code class="docutils literal notranslate"><span class="pre">ErrorCode.PublicAccountNotFoundError</span></code></a></li>
+<li><a class="reference internal" href="#pyviber.error_codes.ErrorCode.PublicAccountSuspendedError"><code class="docutils literal notranslate"><span class="pre">ErrorCode.PublicAccountSuspendedError</span></code></a></li>
+<li><a class="reference internal" href="#pyviber.error_codes.ErrorCode.ReceiverNoSuitableDeviceError"><code class="docutils literal notranslate"><span class="pre">ErrorCode.ReceiverNoSuitableDeviceError</span></code></a></li>
+<li><a class="reference internal" href="#pyviber.error_codes.ErrorCode.ReceiverNotRegisteredError"><code class="docutils literal notranslate"><span class="pre">ErrorCode.ReceiverNotRegisteredError</span></code></a></li>
+<li><a class="reference internal" href="#pyviber.error_codes.ErrorCode.ReceiverNotSubscribedError"><code class="docutils literal notranslate"><span class="pre">ErrorCode.ReceiverNotSubscribedError</span></code></a></li>
+<li><a class="reference internal" href="#pyviber.error_codes.ErrorCode.TooManyRequestsError"><code class="docutils literal notranslate"><span class="pre">ErrorCode.TooManyRequestsError</span></code></a></li>
+<li><a class="reference internal" href="#pyviber.error_codes.ErrorCode.UnsupportedCountryError"><code class="docutils literal notranslate"><span class="pre">ErrorCode.UnsupportedCountryError</span></code></a></li>
+<li><a class="reference internal" href="#pyviber.error_codes.ErrorCode.WebhookNotSetError"><code class="docutils literal notranslate"><span class="pre">ErrorCode.WebhookNotSetError</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#pyviber.error_codes.FreeMessagesExceededError"><code class="docutils literal notranslate"><span class="pre">FreeMessagesExceededError</span></code></a></li>
+<li><a class="reference internal" href="#pyviber.error_codes.GeneralError"><code class="docutils literal notranslate"><span class="pre">GeneralError</span></code></a></li>
+<li><a class="reference internal" href="#pyviber.error_codes.InchatReplyMessageNotAllowedError"><code class="docutils literal notranslate"><span class="pre">InchatReplyMessageNotAllowedError</span></code></a></li>
+<li><a class="reference internal" href="#pyviber.error_codes.IncompatibleWithVersionError"><code class="docutils literal notranslate"><span class="pre">IncompatibleWithVersionError</span></code></a></li>
+<li><a class="reference internal" href="#pyviber.error_codes.InvalidAuthTokenError"><code class="docutils literal notranslate"><span class="pre">InvalidAuthTokenError</span></code></a></li>
+<li><a class="reference internal" href="#pyviber.error_codes.InvalidUrlError"><code class="docutils literal notranslate"><span class="pre">InvalidUrlError</span></code></a></li>
+<li><a class="reference internal" href="#pyviber.error_codes.MissingDataError"><code class="docutils literal notranslate"><span class="pre">MissingDataError</span></code></a></li>
+<li><a class="reference internal" href="#pyviber.error_codes.NoBalanceError"><code class="docutils literal notranslate"><span class="pre">NoBalanceError</span></code></a></li>
+<li><a class="reference internal" href="#pyviber.error_codes.NoPublicChatError"><code class="docutils literal notranslate"><span class="pre">NoPublicChatError</span></code></a></li>
+<li><a class="reference internal" href="#pyviber.error_codes.PaymentUnsupportedError"><code class="docutils literal notranslate"><span class="pre">PaymentUnsupportedError</span></code></a></li>
+<li><a class="reference internal" href="#pyviber.error_codes.PublicAccountBlockedError"><code class="docutils literal notranslate"><span class="pre">PublicAccountBlockedError</span></code></a></li>
+<li><a class="reference internal" href="#pyviber.error_codes.PublicAccountIsNotInlineError"><code class="docutils literal notranslate"><span class="pre">PublicAccountIsNotInlineError</span></code></a></li>
+<li><a class="reference internal" href="#pyviber.error_codes.PublicAccountNotAuthorizedError"><code class="docutils literal notranslate"><span class="pre">PublicAccountNotAuthorizedError</span></code></a></li>
+<li><a class="reference internal" href="#pyviber.error_codes.PublicAccountNotFoundError"><code class="docutils literal notranslate"><span class="pre">PublicAccountNotFoundError</span></code></a></li>
+<li><a class="reference internal" href="#pyviber.error_codes.PublicAccountSuspendedError"><code class="docutils literal notranslate"><span class="pre">PublicAccountSuspendedError</span></code></a></li>
+<li><a class="reference internal" href="#pyviber.error_codes.ReceiverNoSuitableDeviceError"><code class="docutils literal notranslate"><span class="pre">ReceiverNoSuitableDeviceError</span></code></a></li>
+<li><a class="reference internal" href="#pyviber.error_codes.ReceiverNotRegisteredError"><code class="docutils literal notranslate"><span class="pre">ReceiverNotRegisteredError</span></code></a></li>
+<li><a class="reference internal" href="#pyviber.error_codes.ReceiverNotSubscribedError"><code class="docutils literal notranslate"><span class="pre">ReceiverNotSubscribedError</span></code></a></li>
+<li><a class="reference internal" href="#pyviber.error_codes.TooManyRequestsError"><code class="docutils literal notranslate"><span class="pre">TooManyRequestsError</span></code></a></li>
+<li><a class="reference internal" href="#pyviber.error_codes.UnsupportedCountryError"><code class="docutils literal notranslate"><span class="pre">UnsupportedCountryError</span></code></a></li>
+<li><a class="reference internal" href="#pyviber.error_codes.WebhookNotSetError"><code class="docutils literal notranslate"><span class="pre">WebhookNotSetError</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-pyviber.event_type">pyviber.event_type module</a><ul>
+<li><a class="reference internal" href="#pyviber.event_type.EventType"><code class="docutils literal notranslate"><span class="pre">EventType</span></code></a><ul>
+<li><a class="reference internal" href="#pyviber.event_type.EventType.CONVERSATION_STARTED"><code class="docutils literal notranslate"><span class="pre">EventType.CONVERSATION_STARTED</span></code></a></li>
+<li><a class="reference internal" href="#pyviber.event_type.EventType.DELIVERED"><code class="docutils literal notranslate"><span class="pre">EventType.DELIVERED</span></code></a></li>
+<li><a class="reference internal" href="#pyviber.event_type.EventType.FAILED"><code class="docutils literal notranslate"><span class="pre">EventType.FAILED</span></code></a></li>
+<li><a class="reference internal" href="#pyviber.event_type.EventType.MESSAGE"><code class="docutils literal notranslate"><span class="pre">EventType.MESSAGE</span></code></a></li>
+<li><a class="reference internal" href="#pyviber.event_type.EventType.SEEN"><code class="docutils literal notranslate"><span class="pre">EventType.SEEN</span></code></a></li>
+<li><a class="reference internal" href="#pyviber.event_type.EventType.SUBSCRIBED"><code class="docutils literal notranslate"><span class="pre">EventType.SUBSCRIBED</span></code></a></li>
+<li><a class="reference internal" href="#pyviber.event_type.EventType.UNSUBSCRIBED"><code class="docutils literal notranslate"><span class="pre">EventType.UNSUBSCRIBED</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-pyviber.keyboard">pyviber.keyboard module</a><ul>
+<li><a class="reference internal" href="#pyviber.keyboard.Button"><code class="docutils literal notranslate"><span class="pre">Button</span></code></a><ul>
+<li><a class="reference internal" href="#pyviber.keyboard.Button.action_body"><code class="docutils literal notranslate"><span class="pre">Button.action_body</span></code></a></li>
+<li><a class="reference internal" href="#pyviber.keyboard.Button.action_type"><code class="docutils literal notranslate"><span class="pre">Button.action_type</span></code></a></li>
+<li><a class="reference internal" href="#pyviber.keyboard.Button.bg_color"><code class="docutils literal notranslate"><span class="pre">Button.bg_color</span></code></a></li>
+<li><a class="reference internal" href="#pyviber.keyboard.Button.bg_media"><code class="docutils literal notranslate"><span class="pre">Button.bg_media</span></code></a></li>
+<li><a class="reference internal" href="#pyviber.keyboard.Button.bg_media_type"><code class="docutils literal notranslate"><span class="pre">Button.bg_media_type</span></code></a></li>
+<li><a class="reference internal" href="#pyviber.keyboard.Button.columns"><code class="docutils literal notranslate"><span class="pre">Button.columns</span></code></a></li>
+<li><a class="reference internal" href="#pyviber.keyboard.Button.image"><code class="docutils literal notranslate"><span class="pre">Button.image</span></code></a></li>
+<li><a class="reference internal" href="#pyviber.keyboard.Button.rows"><code class="docutils literal notranslate"><span class="pre">Button.rows</span></code></a></li>
+<li><a class="reference internal" href="#pyviber.keyboard.Button.silent"><code class="docutils literal notranslate"><span class="pre">Button.silent</span></code></a></li>
+<li><a class="reference internal" href="#pyviber.keyboard.Button.text"><code class="docutils literal notranslate"><span class="pre">Button.text</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#pyviber.keyboard.Keyboard"><code class="docutils literal notranslate"><span class="pre">Keyboard</span></code></a><ul>
+<li><a class="reference internal" href="#pyviber.keyboard.Keyboard.bg_color"><code class="docutils literal notranslate"><span class="pre">Keyboard.bg_color</span></code></a></li>
+<li><a class="reference internal" href="#pyviber.keyboard.Keyboard.buttons"><code class="docutils literal notranslate"><span class="pre">Keyboard.buttons</span></code></a></li>
+<li><a class="reference internal" href="#pyviber.keyboard.Keyboard.custom_default_height"><code class="docutils literal notranslate"><span class="pre">Keyboard.custom_default_height</span></code></a></li>
+<li><a class="reference internal" href="#pyviber.keyboard.Keyboard.default_height"><code class="docutils literal notranslate"><span class="pre">Keyboard.default_height</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-pyviber.message_type">pyviber.message_type module</a><ul>
+<li><a class="reference internal" href="#pyviber.message_type.MessageType"><code class="docutils literal notranslate"><span class="pre">MessageType</span></code></a><ul>
+<li><a class="reference internal" href="#pyviber.message_type.MessageType.CONTACT"><code class="docutils literal notranslate"><span class="pre">MessageType.CONTACT</span></code></a></li>
+<li><a class="reference internal" href="#pyviber.message_type.MessageType.FILE"><code class="docutils literal notranslate"><span class="pre">MessageType.FILE</span></code></a></li>
+<li><a class="reference internal" href="#pyviber.message_type.MessageType.LOCATION"><code class="docutils literal notranslate"><span class="pre">MessageType.LOCATION</span></code></a></li>
+<li><a class="reference internal" href="#pyviber.message_type.MessageType.PICTURE"><code class="docutils literal notranslate"><span class="pre">MessageType.PICTURE</span></code></a></li>
+<li><a class="reference internal" href="#pyviber.message_type.MessageType.RICH_MEDIA"><code class="docutils literal notranslate"><span class="pre">MessageType.RICH_MEDIA</span></code></a></li>
+<li><a class="reference internal" href="#pyviber.message_type.MessageType.STICKER"><code class="docutils literal notranslate"><span class="pre">MessageType.STICKER</span></code></a></li>
+<li><a class="reference internal" href="#pyviber.message_type.MessageType.TEXT"><code class="docutils literal notranslate"><span class="pre">MessageType.TEXT</span></code></a></li>
+<li><a class="reference internal" href="#pyviber.message_type.MessageType.VIDEO"><code class="docutils literal notranslate"><span class="pre">MessageType.VIDEO</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-pyviber.message_type_handlers">pyviber.message_type_handlers module</a><ul>
+<li><a class="reference internal" href="#pyviber.message_type_handlers.MessageTypeHandlers"><code class="docutils literal notranslate"><span class="pre">MessageTypeHandlers</span></code></a><ul>
+<li><a class="reference internal" href="#pyviber.message_type_handlers.MessageTypeHandlers.ContactMessage"><code class="docutils literal notranslate"><span class="pre">MessageTypeHandlers.ContactMessage</span></code></a></li>
+<li><a class="reference internal" href="#pyviber.message_type_handlers.MessageTypeHandlers.FileMessage"><code class="docutils literal notranslate"><span class="pre">MessageTypeHandlers.FileMessage</span></code></a></li>
+<li><a class="reference internal" href="#pyviber.message_type_handlers.MessageTypeHandlers.LocationMessage"><code class="docutils literal notranslate"><span class="pre">MessageTypeHandlers.LocationMessage</span></code></a></li>
+<li><a class="reference internal" href="#pyviber.message_type_handlers.MessageTypeHandlers.PictureMessage"><code class="docutils literal notranslate"><span class="pre">MessageTypeHandlers.PictureMessage</span></code></a></li>
+<li><a class="reference internal" href="#pyviber.message_type_handlers.MessageTypeHandlers.RichMediaMessage"><code class="docutils literal notranslate"><span class="pre">MessageTypeHandlers.RichMediaMessage</span></code></a></li>
+<li><a class="reference internal" href="#pyviber.message_type_handlers.MessageTypeHandlers.StickerMessage"><code class="docutils literal notranslate"><span class="pre">MessageTypeHandlers.StickerMessage()</span></code></a></li>
+<li><a class="reference internal" href="#pyviber.message_type_handlers.MessageTypeHandlers.TextMessage"><code class="docutils literal notranslate"><span class="pre">MessageTypeHandlers.TextMessage</span></code></a></li>
+<li><a class="reference internal" href="#pyviber.message_type_handlers.MessageTypeHandlers.UrlMessage"><code class="docutils literal notranslate"><span class="pre">MessageTypeHandlers.UrlMessage</span></code></a></li>
+<li><a class="reference internal" href="#pyviber.message_type_handlers.MessageTypeHandlers.VideoMessage"><code class="docutils literal notranslate"><span class="pre">MessageTypeHandlers.VideoMessage</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-pyviber.sender">pyviber.sender module</a><ul>
+<li><a class="reference internal" href="#pyviber.sender.Sender"><code class="docutils literal notranslate"><span class="pre">Sender</span></code></a><ul>
+<li><a class="reference internal" href="#pyviber.sender.Sender.avatar"><code class="docutils literal notranslate"><span class="pre">Sender.avatar</span></code></a></li>
+<li><a class="reference internal" href="#pyviber.sender.Sender.name"><code class="docutils literal notranslate"><span class="pre">Sender.name</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#pyviber-setup-module">pyviber.setup module</a></li>
+<li><a class="reference internal" href="#module-pyviber.user_info">pyviber.user_info module</a><ul>
+<li><a class="reference internal" href="#pyviber.user_info.UserInfo"><code class="docutils literal notranslate"><span class="pre">UserInfo</span></code></a><ul>
+<li><a class="reference internal" href="#pyviber.user_info.UserInfo.avatar"><code class="docutils literal notranslate"><span class="pre">UserInfo.avatar</span></code></a></li>
+<li><a class="reference internal" href="#pyviber.user_info.UserInfo.country"><code class="docutils literal notranslate"><span class="pre">UserInfo.country</span></code></a></li>
+<li><a class="reference internal" href="#pyviber.user_info.UserInfo.id"><code class="docutils literal notranslate"><span class="pre">UserInfo.id</span></code></a></li>
+<li><a class="reference internal" href="#pyviber.user_info.UserInfo.language"><code class="docutils literal notranslate"><span class="pre">UserInfo.language</span></code></a></li>
+<li><a class="reference internal" href="#pyviber.user_info.UserInfo.name"><code class="docutils literal notranslate"><span class="pre">UserInfo.name</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-pyviber">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">pyviber</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">pyviber package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/pyviber.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="pyviber-package">
+<h1>pyviber package<a class="headerlink" href="#pyviber-package" title="Link to this heading"></a></h1>
+<section id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Link to this heading"></a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="pyviber.events.html">pyviber.events package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pyviber.events.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pyviber.events.html#module-pyviber.events.conversation_started_event">pyviber.events.conversation_started_event module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pyviber.events.html#pyviber.events.conversation_started_event.ConversationStartedEvent"><code class="docutils literal notranslate"><span class="pre">ConversationStartedEvent</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pyviber.events.html#module-pyviber.events.delivered_event">pyviber.events.delivered_event module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pyviber.events.html#pyviber.events.delivered_event.DeliveredEvent"><code class="docutils literal notranslate"><span class="pre">DeliveredEvent</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pyviber.events.html#module-pyviber.events.event">pyviber.events.event module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pyviber.events.html#pyviber.events.event.Event"><code class="docutils literal notranslate"><span class="pre">Event</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pyviber.events.html#module-pyviber.events.failed_event">pyviber.events.failed_event module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pyviber.events.html#pyviber.events.failed_event.FailedEvent"><code class="docutils literal notranslate"><span class="pre">FailedEvent</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pyviber.events.html#module-pyviber.events.message_event">pyviber.events.message_event module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pyviber.events.html#pyviber.events.message_event.MessageEvent"><code class="docutils literal notranslate"><span class="pre">MessageEvent</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pyviber.events.html#module-pyviber.events.seen_event">pyviber.events.seen_event module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pyviber.events.html#pyviber.events.seen_event.SeenEvent"><code class="docutils literal notranslate"><span class="pre">SeenEvent</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pyviber.events.html#module-pyviber.events.subscribed_event">pyviber.events.subscribed_event module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pyviber.events.html#pyviber.events.subscribed_event.SubscribedEvent"><code class="docutils literal notranslate"><span class="pre">SubscribedEvent</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pyviber.events.html#module-pyviber.events.unsubscribed_event">pyviber.events.unsubscribed_event module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pyviber.events.html#pyviber.events.unsubscribed_event.UnsubscribedEvent"><code class="docutils literal notranslate"><span class="pre">UnsubscribedEvent</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pyviber.events.html#module-pyviber.events">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pyviber.messages.html">pyviber.messages package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pyviber.messages.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pyviber.messages.html#module-pyviber.messages.contact_message">pyviber.messages.contact_message module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pyviber.messages.html#pyviber.messages.contact_message.Contact"><code class="docutils literal notranslate"><span class="pre">Contact</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="pyviber.messages.html#pyviber.messages.contact_message.Contact.name"><code class="docutils literal notranslate"><span class="pre">Contact.name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyviber.messages.html#pyviber.messages.contact_message.Contact.phone_number"><code class="docutils literal notranslate"><span class="pre">Contact.phone_number</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="pyviber.messages.html#pyviber.messages.contact_message.ContactMessage"><code class="docutils literal notranslate"><span class="pre">ContactMessage</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pyviber.messages.html#module-pyviber.messages.file_message">pyviber.messages.file_message module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pyviber.messages.html#pyviber.messages.file_message.FileMessage"><code class="docutils literal notranslate"><span class="pre">FileMessage</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pyviber.messages.html#module-pyviber.messages.location_message">pyviber.messages.location_message module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pyviber.messages.html#pyviber.messages.location_message.Location"><code class="docutils literal notranslate"><span class="pre">Location</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="pyviber.messages.html#pyviber.messages.location_message.Location.lat"><code class="docutils literal notranslate"><span class="pre">Location.lat</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyviber.messages.html#pyviber.messages.location_message.Location.lon"><code class="docutils literal notranslate"><span class="pre">Location.lon</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="pyviber.messages.html#pyviber.messages.location_message.LocationMessage"><code class="docutils literal notranslate"><span class="pre">LocationMessage</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pyviber.messages.html#module-pyviber.messages.message">pyviber.messages.message module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pyviber.messages.html#pyviber.messages.message.Message"><code class="docutils literal notranslate"><span class="pre">Message</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pyviber.messages.html#module-pyviber.messages.picture_message">pyviber.messages.picture_message module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pyviber.messages.html#pyviber.messages.picture_message.PictureMessage"><code class="docutils literal notranslate"><span class="pre">PictureMessage</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pyviber.messages.html#module-pyviber.messages.rich_media_message">pyviber.messages.rich_media_message module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pyviber.messages.html#pyviber.messages.rich_media_message.RichMediaMessage"><code class="docutils literal notranslate"><span class="pre">RichMediaMessage</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pyviber.messages.html#module-pyviber.messages.sticker_message">pyviber.messages.sticker_message module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pyviber.messages.html#pyviber.messages.sticker_message.StickerMessage"><code class="docutils literal notranslate"><span class="pre">StickerMessage</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pyviber.messages.html#module-pyviber.messages.text_message">pyviber.messages.text_message module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pyviber.messages.html#pyviber.messages.text_message.TextMessage"><code class="docutils literal notranslate"><span class="pre">TextMessage</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pyviber.messages.html#module-pyviber.messages.url_message">pyviber.messages.url_message module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pyviber.messages.html#pyviber.messages.url_message.UrlMessage"><code class="docutils literal notranslate"><span class="pre">UrlMessage</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pyviber.messages.html#module-pyviber.messages.video_message">pyviber.messages.video_message module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pyviber.messages.html#pyviber.messages.video_message.VideoMessage"><code class="docutils literal notranslate"><span class="pre">VideoMessage</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pyviber.messages.html#module-pyviber.messages">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
+</section>
+<section id="module-pyviber.bot">
+<span id="pyviber-bot-module"></span><h2>pyviber.bot module<a class="headerlink" href="#module-pyviber.bot" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="pyviber.bot.Bot">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyviber.bot.</span></span><span class="sig-name descname"><span class="pre">Bot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyviber/bot.html#Bot"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyviber.bot.Bot" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Viber Bot
+:param token: Bot Token</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pyviber.bot.Bot.event">
+<span class="sig-name descname"><span class="pre">event</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyviber/bot.html#Bot.event"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyviber.bot.Bot.event" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyviber.bot.Bot.get_account_info">
+<span class="sig-name descname"><span class="pre">get_account_info</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pyviber.bot_info.BotInfo" title="pyviber.bot_info.BotInfo"><span class="pre">BotInfo</span></a></span></span><a class="reference internal" href="_modules/pyviber/bot.html#Bot.get_account_info"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyviber.bot.Bot.get_account_info" title="Link to this definition"></a></dt>
+<dd><p>Get Account Info</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyviber.bot.Bot.get_online">
+<span class="sig-name descname"><span class="pre">get_online</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ids</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/pyviber/bot.html#Bot.get_online"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyviber.bot.Bot.get_online" title="Link to this definition"></a></dt>
+<dd><p>Get Online Status of Users
+:param ids: Unique Viber User IDs</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyviber.bot.Bot.get_user_details">
+<span class="sig-name descname"><span class="pre">get_user_details</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pyviber.user_info.UserInfo" title="pyviber.user_info.UserInfo"><span class="pre">UserInfo</span></a></span></span><a class="reference internal" href="_modules/pyviber/bot.html#Bot.get_user_details"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyviber.bot.Bot.get_user_details" title="Link to this definition"></a></dt>
+<dd><p>Get User Details
+:param id: Unique Viber user ID</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyviber.bot.Bot.handle_event">
+<span class="sig-name descname"><span class="pre">handle_event</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Any</span></span></span><a class="reference internal" href="_modules/pyviber/bot.html#Bot.handle_event"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyviber.bot.Bot.handle_event" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyviber.bot.Bot.send_message">
+<span class="sig-name descname"><span class="pre">send_message</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">receiver</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pyviber.messages.html#pyviber.messages.message.Message" title="pyviber.messages.message.Message"><span class="pre">Message</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">sender</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pyviber.sender.Sender" title="pyviber.sender.Sender"><span class="pre">Sender</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/pyviber/bot.html#Bot.send_message"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyviber.bot.Bot.send_message" title="Link to this definition"></a></dt>
+<dd><p>Send Message
+:param receiver: Unique Viber user ID
+:param message: Message to Send
+:param sender: Viber Message Sender (Defaults to Bot)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyviber.bot.Bot.set_webhook">
+<span class="sig-name descname"><span class="pre">set_webhook</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">webhook</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">event_types</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pyviber.event_type.EventType" title="pyviber.event_type.EventType"><span class="pre">EventType</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/pyviber/bot.html#Bot.set_webhook"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyviber.bot.Bot.set_webhook" title="Link to this definition"></a></dt>
+<dd><p>Set Webhook
+:param webhook: Account webhook URL to receive callbacks &amp; messages from users
+:param event_types: Indicates the types of Viber events that the account owner would like to be notified about</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyviber.bot.Bot.unset_webhook">
+<span class="sig-name descname"><span class="pre">unset_webhook</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/pyviber/bot.html#Bot.unset_webhook"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyviber.bot.Bot.unset_webhook" title="Link to this definition"></a></dt>
+<dd><p>Unset Webhook</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-pyviber.bot_info">
+<span id="pyviber-bot-info-module"></span><h2>pyviber.bot_info module<a class="headerlink" href="#module-pyviber.bot_info" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="pyviber.bot_info.BotInfo">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyviber.bot_info.</span></span><span class="sig-name descname"><span class="pre">BotInfo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">uri</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">icon</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">background</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">country</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">webhook</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyviber/bot_info.html#BotInfo"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyviber.bot_info.BotInfo" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Bot Info Dataclass
+:param id: Bot Account ID
+:param name: Bot Account Name
+:param uri: Unique URI of the Account
+:param icon: Account icon URL
+:param background: Conversation background URL
+:param country: Bot Account Country
+:param webhook: Account Registered Webhook URL</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyviber.bot_info.BotInfo.background">
+<span class="sig-name descname"><span class="pre">background</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#pyviber.bot_info.BotInfo.background" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyviber.bot_info.BotInfo.country">
+<span class="sig-name descname"><span class="pre">country</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#pyviber.bot_info.BotInfo.country" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyviber.bot_info.BotInfo.icon">
+<span class="sig-name descname"><span class="pre">icon</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#pyviber.bot_info.BotInfo.icon" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyviber.bot_info.BotInfo.id">
+<span class="sig-name descname"><span class="pre">id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#pyviber.bot_info.BotInfo.id" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyviber.bot_info.BotInfo.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#pyviber.bot_info.BotInfo.name" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyviber.bot_info.BotInfo.uri">
+<span class="sig-name descname"><span class="pre">uri</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#pyviber.bot_info.BotInfo.uri" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyviber.bot_info.BotInfo.webhook">
+<span class="sig-name descname"><span class="pre">webhook</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#pyviber.bot_info.BotInfo.webhook" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-pyviber.error_codes">
+<span id="pyviber-error-codes-module"></span><h2>pyviber.error_codes module<a class="headerlink" href="#module-pyviber.error_codes" title="Link to this heading"></a></h2>
+<dl class="py exception">
+<dt class="sig sig-object py" id="pyviber.error_codes.ApiVersionNotSupportedError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyviber.error_codes.</span></span><span class="sig-name descname"><span class="pre">ApiVersionNotSupportedError</span></span><a class="reference internal" href="_modules/pyviber/error_codes.html#ApiVersionNotSupportedError"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyviber.error_codes.ApiVersionNotSupportedError" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="pyviber.error_codes.BadDataError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyviber.error_codes.</span></span><span class="sig-name descname"><span class="pre">BadDataError</span></span><a class="reference internal" href="_modules/pyviber/error_codes.html#BadDataError"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyviber.error_codes.BadDataError" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="pyviber.error_codes.BroadcastNotAllowedError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyviber.error_codes.</span></span><span class="sig-name descname"><span class="pre">BroadcastNotAllowedError</span></span><a class="reference internal" href="_modules/pyviber/error_codes.html#BroadcastNotAllowedError"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyviber.error_codes.BroadcastNotAllowedError" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="pyviber.error_codes.CannotSendBroadcastError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyviber.error_codes.</span></span><span class="sig-name descname"><span class="pre">CannotSendBroadcastError</span></span><a class="reference internal" href="_modules/pyviber/error_codes.html#CannotSendBroadcastError"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyviber.error_codes.CannotSendBroadcastError" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pyviber.error_codes.ErrorCode">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyviber.error_codes.</span></span><span class="sig-name descname"><span class="pre">ErrorCode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qualname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundary</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyviber/error_codes.html#ErrorCode"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyviber.error_codes.ErrorCode" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
+<p>Error Codes Enum</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyviber.error_codes.ErrorCode.ApiVersionNotSupportedError">
+<span class="sig-name descname"><span class="pre">ApiVersionNotSupportedError</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">13</span></em><a class="headerlink" href="#pyviber.error_codes.ErrorCode.ApiVersionNotSupportedError" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyviber.error_codes.ErrorCode.BadDataError">
+<span class="sig-name descname"><span class="pre">BadDataError</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">3</span></em><a class="headerlink" href="#pyviber.error_codes.ErrorCode.BadDataError" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyviber.error_codes.ErrorCode.BroadcastNotAllowedError">
+<span class="sig-name descname"><span class="pre">BroadcastNotAllowedError</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">20</span></em><a class="headerlink" href="#pyviber.error_codes.ErrorCode.BroadcastNotAllowedError" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyviber.error_codes.ErrorCode.CannotSendBroadcastError">
+<span class="sig-name descname"><span class="pre">CannotSendBroadcastError</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">19</span></em><a class="headerlink" href="#pyviber.error_codes.ErrorCode.CannotSendBroadcastError" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyviber.error_codes.ErrorCode.FreeMessagesExceededError">
+<span class="sig-name descname"><span class="pre">FreeMessagesExceededError</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">23</span></em><a class="headerlink" href="#pyviber.error_codes.ErrorCode.FreeMessagesExceededError" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyviber.error_codes.ErrorCode.GeneralError">
+<span class="sig-name descname"><span class="pre">GeneralError</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">25</span></em><a class="headerlink" href="#pyviber.error_codes.ErrorCode.GeneralError" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyviber.error_codes.ErrorCode.InchatReplyMessageNotAllowedError">
+<span class="sig-name descname"><span class="pre">InchatReplyMessageNotAllowedError</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">16</span></em><a class="headerlink" href="#pyviber.error_codes.ErrorCode.InchatReplyMessageNotAllowedError" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyviber.error_codes.ErrorCode.IncompatibleWithVersionError">
+<span class="sig-name descname"><span class="pre">IncompatibleWithVersionError</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">14</span></em><a class="headerlink" href="#pyviber.error_codes.ErrorCode.IncompatibleWithVersionError" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyviber.error_codes.ErrorCode.InvalidAuthTokenError">
+<span class="sig-name descname"><span class="pre">InvalidAuthTokenError</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#pyviber.error_codes.ErrorCode.InvalidAuthTokenError" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyviber.error_codes.ErrorCode.InvalidUrlError">
+<span class="sig-name descname"><span class="pre">InvalidUrlError</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#pyviber.error_codes.ErrorCode.InvalidUrlError" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyviber.error_codes.ErrorCode.MissingDataError">
+<span class="sig-name descname"><span class="pre">MissingDataError</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">4</span></em><a class="headerlink" href="#pyviber.error_codes.ErrorCode.MissingDataError" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyviber.error_codes.ErrorCode.NoBalanceError">
+<span class="sig-name descname"><span class="pre">NoBalanceError</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">24</span></em><a class="headerlink" href="#pyviber.error_codes.ErrorCode.NoBalanceError" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyviber.error_codes.ErrorCode.NoPublicChatError">
+<span class="sig-name descname"><span class="pre">NoPublicChatError</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">18</span></em><a class="headerlink" href="#pyviber.error_codes.ErrorCode.NoPublicChatError" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyviber.error_codes.ErrorCode.PaymentUnsupportedError">
+<span class="sig-name descname"><span class="pre">PaymentUnsupportedError</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">22</span></em><a class="headerlink" href="#pyviber.error_codes.ErrorCode.PaymentUnsupportedError" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyviber.error_codes.ErrorCode.PublicAccountBlockedError">
+<span class="sig-name descname"><span class="pre">PublicAccountBlockedError</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">7</span></em><a class="headerlink" href="#pyviber.error_codes.ErrorCode.PublicAccountBlockedError" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyviber.error_codes.ErrorCode.PublicAccountIsNotInlineError">
+<span class="sig-name descname"><span class="pre">PublicAccountIsNotInlineError</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">17</span></em><a class="headerlink" href="#pyviber.error_codes.ErrorCode.PublicAccountIsNotInlineError" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyviber.error_codes.ErrorCode.PublicAccountNotAuthorizedError">
+<span class="sig-name descname"><span class="pre">PublicAccountNotAuthorizedError</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">15</span></em><a class="headerlink" href="#pyviber.error_codes.ErrorCode.PublicAccountNotAuthorizedError" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyviber.error_codes.ErrorCode.PublicAccountNotFoundError">
+<span class="sig-name descname"><span class="pre">PublicAccountNotFoundError</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">8</span></em><a class="headerlink" href="#pyviber.error_codes.ErrorCode.PublicAccountNotFoundError" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyviber.error_codes.ErrorCode.PublicAccountSuspendedError">
+<span class="sig-name descname"><span class="pre">PublicAccountSuspendedError</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">9</span></em><a class="headerlink" href="#pyviber.error_codes.ErrorCode.PublicAccountSuspendedError" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyviber.error_codes.ErrorCode.ReceiverNoSuitableDeviceError">
+<span class="sig-name descname"><span class="pre">ReceiverNoSuitableDeviceError</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">11</span></em><a class="headerlink" href="#pyviber.error_codes.ErrorCode.ReceiverNoSuitableDeviceError" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyviber.error_codes.ErrorCode.ReceiverNotRegisteredError">
+<span class="sig-name descname"><span class="pre">ReceiverNotRegisteredError</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">5</span></em><a class="headerlink" href="#pyviber.error_codes.ErrorCode.ReceiverNotRegisteredError" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyviber.error_codes.ErrorCode.ReceiverNotSubscribedError">
+<span class="sig-name descname"><span class="pre">ReceiverNotSubscribedError</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">6</span></em><a class="headerlink" href="#pyviber.error_codes.ErrorCode.ReceiverNotSubscribedError" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyviber.error_codes.ErrorCode.TooManyRequestsError">
+<span class="sig-name descname"><span class="pre">TooManyRequestsError</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">12</span></em><a class="headerlink" href="#pyviber.error_codes.ErrorCode.TooManyRequestsError" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyviber.error_codes.ErrorCode.UnsupportedCountryError">
+<span class="sig-name descname"><span class="pre">UnsupportedCountryError</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">21</span></em><a class="headerlink" href="#pyviber.error_codes.ErrorCode.UnsupportedCountryError" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyviber.error_codes.ErrorCode.WebhookNotSetError">
+<span class="sig-name descname"><span class="pre">WebhookNotSetError</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">10</span></em><a class="headerlink" href="#pyviber.error_codes.ErrorCode.WebhookNotSetError" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="pyviber.error_codes.FreeMessagesExceededError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyviber.error_codes.</span></span><span class="sig-name descname"><span class="pre">FreeMessagesExceededError</span></span><a class="reference internal" href="_modules/pyviber/error_codes.html#FreeMessagesExceededError"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyviber.error_codes.FreeMessagesExceededError" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="pyviber.error_codes.GeneralError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyviber.error_codes.</span></span><span class="sig-name descname"><span class="pre">GeneralError</span></span><a class="reference internal" href="_modules/pyviber/error_codes.html#GeneralError"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyviber.error_codes.GeneralError" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="pyviber.error_codes.InchatReplyMessageNotAllowedError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyviber.error_codes.</span></span><span class="sig-name descname"><span class="pre">InchatReplyMessageNotAllowedError</span></span><a class="reference internal" href="_modules/pyviber/error_codes.html#InchatReplyMessageNotAllowedError"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyviber.error_codes.InchatReplyMessageNotAllowedError" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="pyviber.error_codes.IncompatibleWithVersionError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyviber.error_codes.</span></span><span class="sig-name descname"><span class="pre">IncompatibleWithVersionError</span></span><a class="reference internal" href="_modules/pyviber/error_codes.html#IncompatibleWithVersionError"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyviber.error_codes.IncompatibleWithVersionError" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="pyviber.error_codes.InvalidAuthTokenError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyviber.error_codes.</span></span><span class="sig-name descname"><span class="pre">InvalidAuthTokenError</span></span><a class="reference internal" href="_modules/pyviber/error_codes.html#InvalidAuthTokenError"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyviber.error_codes.InvalidAuthTokenError" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="pyviber.error_codes.InvalidUrlError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyviber.error_codes.</span></span><span class="sig-name descname"><span class="pre">InvalidUrlError</span></span><a class="reference internal" href="_modules/pyviber/error_codes.html#InvalidUrlError"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyviber.error_codes.InvalidUrlError" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="pyviber.error_codes.MissingDataError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyviber.error_codes.</span></span><span class="sig-name descname"><span class="pre">MissingDataError</span></span><a class="reference internal" href="_modules/pyviber/error_codes.html#MissingDataError"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyviber.error_codes.MissingDataError" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="pyviber.error_codes.NoBalanceError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyviber.error_codes.</span></span><span class="sig-name descname"><span class="pre">NoBalanceError</span></span><a class="reference internal" href="_modules/pyviber/error_codes.html#NoBalanceError"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyviber.error_codes.NoBalanceError" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="pyviber.error_codes.NoPublicChatError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyviber.error_codes.</span></span><span class="sig-name descname"><span class="pre">NoPublicChatError</span></span><a class="reference internal" href="_modules/pyviber/error_codes.html#NoPublicChatError"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyviber.error_codes.NoPublicChatError" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="pyviber.error_codes.PaymentUnsupportedError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyviber.error_codes.</span></span><span class="sig-name descname"><span class="pre">PaymentUnsupportedError</span></span><a class="reference internal" href="_modules/pyviber/error_codes.html#PaymentUnsupportedError"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyviber.error_codes.PaymentUnsupportedError" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="pyviber.error_codes.PublicAccountBlockedError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyviber.error_codes.</span></span><span class="sig-name descname"><span class="pre">PublicAccountBlockedError</span></span><a class="reference internal" href="_modules/pyviber/error_codes.html#PublicAccountBlockedError"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyviber.error_codes.PublicAccountBlockedError" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="pyviber.error_codes.PublicAccountIsNotInlineError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyviber.error_codes.</span></span><span class="sig-name descname"><span class="pre">PublicAccountIsNotInlineError</span></span><a class="reference internal" href="_modules/pyviber/error_codes.html#PublicAccountIsNotInlineError"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyviber.error_codes.PublicAccountIsNotInlineError" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="pyviber.error_codes.PublicAccountNotAuthorizedError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyviber.error_codes.</span></span><span class="sig-name descname"><span class="pre">PublicAccountNotAuthorizedError</span></span><a class="reference internal" href="_modules/pyviber/error_codes.html#PublicAccountNotAuthorizedError"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyviber.error_codes.PublicAccountNotAuthorizedError" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="pyviber.error_codes.PublicAccountNotFoundError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyviber.error_codes.</span></span><span class="sig-name descname"><span class="pre">PublicAccountNotFoundError</span></span><a class="reference internal" href="_modules/pyviber/error_codes.html#PublicAccountNotFoundError"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyviber.error_codes.PublicAccountNotFoundError" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="pyviber.error_codes.PublicAccountSuspendedError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyviber.error_codes.</span></span><span class="sig-name descname"><span class="pre">PublicAccountSuspendedError</span></span><a class="reference internal" href="_modules/pyviber/error_codes.html#PublicAccountSuspendedError"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyviber.error_codes.PublicAccountSuspendedError" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="pyviber.error_codes.ReceiverNoSuitableDeviceError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyviber.error_codes.</span></span><span class="sig-name descname"><span class="pre">ReceiverNoSuitableDeviceError</span></span><a class="reference internal" href="_modules/pyviber/error_codes.html#ReceiverNoSuitableDeviceError"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyviber.error_codes.ReceiverNoSuitableDeviceError" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="pyviber.error_codes.ReceiverNotRegisteredError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyviber.error_codes.</span></span><span class="sig-name descname"><span class="pre">ReceiverNotRegisteredError</span></span><a class="reference internal" href="_modules/pyviber/error_codes.html#ReceiverNotRegisteredError"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyviber.error_codes.ReceiverNotRegisteredError" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="pyviber.error_codes.ReceiverNotSubscribedError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyviber.error_codes.</span></span><span class="sig-name descname"><span class="pre">ReceiverNotSubscribedError</span></span><a class="reference internal" href="_modules/pyviber/error_codes.html#ReceiverNotSubscribedError"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyviber.error_codes.ReceiverNotSubscribedError" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="pyviber.error_codes.TooManyRequestsError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyviber.error_codes.</span></span><span class="sig-name descname"><span class="pre">TooManyRequestsError</span></span><a class="reference internal" href="_modules/pyviber/error_codes.html#TooManyRequestsError"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyviber.error_codes.TooManyRequestsError" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="pyviber.error_codes.UnsupportedCountryError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyviber.error_codes.</span></span><span class="sig-name descname"><span class="pre">UnsupportedCountryError</span></span><a class="reference internal" href="_modules/pyviber/error_codes.html#UnsupportedCountryError"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyviber.error_codes.UnsupportedCountryError" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="pyviber.error_codes.WebhookNotSetError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyviber.error_codes.</span></span><span class="sig-name descname"><span class="pre">WebhookNotSetError</span></span><a class="reference internal" href="_modules/pyviber/error_codes.html#WebhookNotSetError"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyviber.error_codes.WebhookNotSetError" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+</dd></dl>
+
+</section>
+<section id="module-pyviber.event_type">
+<span id="pyviber-event-type-module"></span><h2>pyviber.event_type module<a class="headerlink" href="#module-pyviber.event_type" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="pyviber.event_type.EventType">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyviber.event_type.</span></span><span class="sig-name descname"><span class="pre">EventType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qualname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundary</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyviber/event_type.html#EventType"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyviber.event_type.EventType" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
+<p>Event Type Enum</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyviber.event_type.EventType.CONVERSATION_STARTED">
+<span class="sig-name descname"><span class="pre">CONVERSATION_STARTED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'conversation_started'</span></em><a class="headerlink" href="#pyviber.event_type.EventType.CONVERSATION_STARTED" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyviber.event_type.EventType.DELIVERED">
+<span class="sig-name descname"><span class="pre">DELIVERED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'delivered'</span></em><a class="headerlink" href="#pyviber.event_type.EventType.DELIVERED" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyviber.event_type.EventType.FAILED">
+<span class="sig-name descname"><span class="pre">FAILED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'failed'</span></em><a class="headerlink" href="#pyviber.event_type.EventType.FAILED" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyviber.event_type.EventType.MESSAGE">
+<span class="sig-name descname"><span class="pre">MESSAGE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'message'</span></em><a class="headerlink" href="#pyviber.event_type.EventType.MESSAGE" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyviber.event_type.EventType.SEEN">
+<span class="sig-name descname"><span class="pre">SEEN</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'seen'</span></em><a class="headerlink" href="#pyviber.event_type.EventType.SEEN" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyviber.event_type.EventType.SUBSCRIBED">
+<span class="sig-name descname"><span class="pre">SUBSCRIBED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'subscribed'</span></em><a class="headerlink" href="#pyviber.event_type.EventType.SUBSCRIBED" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyviber.event_type.EventType.UNSUBSCRIBED">
+<span class="sig-name descname"><span class="pre">UNSUBSCRIBED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'unsubscribed'</span></em><a class="headerlink" href="#pyviber.event_type.EventType.UNSUBSCRIBED" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-pyviber.keyboard">
+<span id="pyviber-keyboard-module"></span><h2>pyviber.keyboard module<a class="headerlink" href="#module-pyviber.keyboard" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="pyviber.keyboard.Button">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyviber.keyboard.</span></span><span class="sig-name descname"><span class="pre">Button</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">columns</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rows</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bg_color</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">silent</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bg_media_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bg_media</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">action_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">action_body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">image</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyviber/keyboard.html#Button"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyviber.keyboard.Button" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Message Keyboard Button Dataclass
+:param columns: Button Width in Columns
+:param rows: Button Height in Columns
+:param bg_color: Background Color of Button
+:param silent: Determine Whether the User Action is Presented in the Conversation
+:param bg_media_type: Type of the Background Media
+:param bg_media: URL for Background Media Content
+:param action_type: Type of Action Pressing the Button will Perform
+:param action_body: Action Body
+:param image: URL of Image to Place on Top of Background
+:param text: Text to be Displayed on the Button</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyviber.keyboard.Button.action_body">
+<span class="sig-name descname"><span class="pre">action_body</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#pyviber.keyboard.Button.action_body" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyviber.keyboard.Button.action_type">
+<span class="sig-name descname"><span class="pre">action_type</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#pyviber.keyboard.Button.action_type" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyviber.keyboard.Button.bg_color">
+<span class="sig-name descname"><span class="pre">bg_color</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#pyviber.keyboard.Button.bg_color" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyviber.keyboard.Button.bg_media">
+<span class="sig-name descname"><span class="pre">bg_media</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#pyviber.keyboard.Button.bg_media" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyviber.keyboard.Button.bg_media_type">
+<span class="sig-name descname"><span class="pre">bg_media_type</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#pyviber.keyboard.Button.bg_media_type" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyviber.keyboard.Button.columns">
+<span class="sig-name descname"><span class="pre">columns</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#pyviber.keyboard.Button.columns" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyviber.keyboard.Button.image">
+<span class="sig-name descname"><span class="pre">image</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#pyviber.keyboard.Button.image" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyviber.keyboard.Button.rows">
+<span class="sig-name descname"><span class="pre">rows</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#pyviber.keyboard.Button.rows" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyviber.keyboard.Button.silent">
+<span class="sig-name descname"><span class="pre">silent</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#pyviber.keyboard.Button.silent" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyviber.keyboard.Button.text">
+<span class="sig-name descname"><span class="pre">text</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#pyviber.keyboard.Button.text" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pyviber.keyboard.Keyboard">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyviber.keyboard.</span></span><span class="sig-name descname"><span class="pre">Keyboard</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">buttons</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pyviber.keyboard.Button" title="pyviber.keyboard.Button"><span class="pre">Button</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bg_color</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default_height</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">custom_default_height</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyviber/keyboard.html#Keyboard"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyviber.keyboard.Keyboard" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Message Keyboard Dataclass
+:param buttons: List Containing All Keyboard Buttons by Order
+:param bg_color: Background Color of the Keyboard
+:param default_height: Should Height be Minimized
+:param custom_default_height: How Much Percent of Free Screen Space in Chat Should be Taken by Keyboard</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyviber.keyboard.Keyboard.bg_color">
+<span class="sig-name descname"><span class="pre">bg_color</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#pyviber.keyboard.Keyboard.bg_color" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyviber.keyboard.Keyboard.buttons">
+<span class="sig-name descname"><span class="pre">buttons</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pyviber.keyboard.Button" title="pyviber.keyboard.Button"><span class="pre">Button</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#pyviber.keyboard.Keyboard.buttons" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyviber.keyboard.Keyboard.custom_default_height">
+<span class="sig-name descname"><span class="pre">custom_default_height</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#pyviber.keyboard.Keyboard.custom_default_height" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyviber.keyboard.Keyboard.default_height">
+<span class="sig-name descname"><span class="pre">default_height</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#pyviber.keyboard.Keyboard.default_height" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-pyviber.message_type">
+<span id="pyviber-message-type-module"></span><h2>pyviber.message_type module<a class="headerlink" href="#module-pyviber.message_type" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="pyviber.message_type.MessageType">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyviber.message_type.</span></span><span class="sig-name descname"><span class="pre">MessageType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qualname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundary</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyviber/message_type.html#MessageType"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyviber.message_type.MessageType" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
+<p>Message Type Enum</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyviber.message_type.MessageType.CONTACT">
+<span class="sig-name descname"><span class="pre">CONTACT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'contact'</span></em><a class="headerlink" href="#pyviber.message_type.MessageType.CONTACT" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyviber.message_type.MessageType.FILE">
+<span class="sig-name descname"><span class="pre">FILE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'file'</span></em><a class="headerlink" href="#pyviber.message_type.MessageType.FILE" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyviber.message_type.MessageType.LOCATION">
+<span class="sig-name descname"><span class="pre">LOCATION</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'location'</span></em><a class="headerlink" href="#pyviber.message_type.MessageType.LOCATION" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyviber.message_type.MessageType.PICTURE">
+<span class="sig-name descname"><span class="pre">PICTURE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'picture'</span></em><a class="headerlink" href="#pyviber.message_type.MessageType.PICTURE" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyviber.message_type.MessageType.RICH_MEDIA">
+<span class="sig-name descname"><span class="pre">RICH_MEDIA</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'rich_media'</span></em><a class="headerlink" href="#pyviber.message_type.MessageType.RICH_MEDIA" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyviber.message_type.MessageType.STICKER">
+<span class="sig-name descname"><span class="pre">STICKER</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'sticker'</span></em><a class="headerlink" href="#pyviber.message_type.MessageType.STICKER" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyviber.message_type.MessageType.TEXT">
+<span class="sig-name descname"><span class="pre">TEXT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'text'</span></em><a class="headerlink" href="#pyviber.message_type.MessageType.TEXT" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyviber.message_type.MessageType.VIDEO">
+<span class="sig-name descname"><span class="pre">VIDEO</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'video'</span></em><a class="headerlink" href="#pyviber.message_type.MessageType.VIDEO" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-pyviber.message_type_handlers">
+<span id="pyviber-message-type-handlers-module"></span><h2>pyviber.message_type_handlers module<a class="headerlink" href="#module-pyviber.message_type_handlers" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="pyviber.message_type_handlers.MessageTypeHandlers">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyviber.message_type_handlers.</span></span><span class="sig-name descname"><span class="pre">MessageTypeHandlers</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qualname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundary</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyviber/message_type_handlers.html#MessageTypeHandlers"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyviber.message_type_handlers.MessageTypeHandlers" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
+<p>Message Type Handlers Enum</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyviber.message_type_handlers.MessageTypeHandlers.ContactMessage">
+<span class="sig-name descname"><span class="pre">ContactMessage</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(&lt;function</span> <span class="pre">MessageTypeHandlers.&lt;lambda&gt;&gt;,)</span></em><a class="headerlink" href="#pyviber.message_type_handlers.MessageTypeHandlers.ContactMessage" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyviber.message_type_handlers.MessageTypeHandlers.FileMessage">
+<span class="sig-name descname"><span class="pre">FileMessage</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(&lt;function</span> <span class="pre">MessageTypeHandlers.&lt;lambda&gt;&gt;,)</span></em><a class="headerlink" href="#pyviber.message_type_handlers.MessageTypeHandlers.FileMessage" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyviber.message_type_handlers.MessageTypeHandlers.LocationMessage">
+<span class="sig-name descname"><span class="pre">LocationMessage</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(&lt;function</span> <span class="pre">MessageTypeHandlers.&lt;lambda&gt;&gt;,)</span></em><a class="headerlink" href="#pyviber.message_type_handlers.MessageTypeHandlers.LocationMessage" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyviber.message_type_handlers.MessageTypeHandlers.PictureMessage">
+<span class="sig-name descname"><span class="pre">PictureMessage</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(&lt;function</span> <span class="pre">MessageTypeHandlers.&lt;lambda&gt;&gt;,)</span></em><a class="headerlink" href="#pyviber.message_type_handlers.MessageTypeHandlers.PictureMessage" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyviber.message_type_handlers.MessageTypeHandlers.RichMediaMessage">
+<span class="sig-name descname"><span class="pre">RichMediaMessage</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(&lt;function</span> <span class="pre">MessageTypeHandlers.&lt;lambda&gt;&gt;,)</span></em><a class="headerlink" href="#pyviber.message_type_handlers.MessageTypeHandlers.RichMediaMessage" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyviber.message_type_handlers.MessageTypeHandlers.StickerMessage">
+<span class="sig-name descname"><span class="pre">StickerMessage</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyviber.message_type_handlers.MessageTypeHandlers.StickerMessage" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyviber.message_type_handlers.MessageTypeHandlers.TextMessage">
+<span class="sig-name descname"><span class="pre">TextMessage</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(&lt;function</span> <span class="pre">MessageTypeHandlers.&lt;lambda&gt;&gt;,)</span></em><a class="headerlink" href="#pyviber.message_type_handlers.MessageTypeHandlers.TextMessage" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyviber.message_type_handlers.MessageTypeHandlers.UrlMessage">
+<span class="sig-name descname"><span class="pre">UrlMessage</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(&lt;function</span> <span class="pre">MessageTypeHandlers.&lt;lambda&gt;&gt;,)</span></em><a class="headerlink" href="#pyviber.message_type_handlers.MessageTypeHandlers.UrlMessage" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyviber.message_type_handlers.MessageTypeHandlers.VideoMessage">
+<span class="sig-name descname"><span class="pre">VideoMessage</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(&lt;function</span> <span class="pre">MessageTypeHandlers.&lt;lambda&gt;&gt;,)</span></em><a class="headerlink" href="#pyviber.message_type_handlers.MessageTypeHandlers.VideoMessage" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-pyviber.sender">
+<span id="pyviber-sender-module"></span><h2>pyviber.sender module<a class="headerlink" href="#module-pyviber.sender" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="pyviber.sender.Sender">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyviber.sender.</span></span><span class="sig-name descname"><span class="pre">Sender</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">avatar</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyviber/sender.html#Sender"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyviber.sender.Sender" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Message Sender Dataclass
+:param name: Sender Name
+:param avatar: Sender Avatar URL</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyviber.sender.Sender.avatar">
+<span class="sig-name descname"><span class="pre">avatar</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#pyviber.sender.Sender.avatar" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyviber.sender.Sender.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#pyviber.sender.Sender.name" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="pyviber-setup-module">
+<h2>pyviber.setup module<a class="headerlink" href="#pyviber-setup-module" title="Link to this heading"></a></h2>
+</section>
+<section id="module-pyviber.user_info">
+<span id="pyviber-user-info-module"></span><h2>pyviber.user_info module<a class="headerlink" href="#module-pyviber.user_info" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="pyviber.user_info.UserInfo">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyviber.user_info.</span></span><span class="sig-name descname"><span class="pre">UserInfo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">avatar</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">country</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">language</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyviber/user_info.html#UserInfo"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyviber.user_info.UserInfo" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Viber User Info Dataclass
+:param id: Account ID
+:param name: User Name
+:param avatar: Account Avatar URL
+:param country: User Country
+:param language: User Language</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyviber.user_info.UserInfo.avatar">
+<span class="sig-name descname"><span class="pre">avatar</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#pyviber.user_info.UserInfo.avatar" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyviber.user_info.UserInfo.country">
+<span class="sig-name descname"><span class="pre">country</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#pyviber.user_info.UserInfo.country" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyviber.user_info.UserInfo.id">
+<span class="sig-name descname"><span class="pre">id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#pyviber.user_info.UserInfo.id" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyviber.user_info.UserInfo.language">
+<span class="sig-name descname"><span class="pre">language</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#pyviber.user_info.UserInfo.language" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyviber.user_info.UserInfo.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#pyviber.user_info.UserInfo.name" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-pyviber">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-pyviber" title="Link to this heading"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, PyDevNik.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

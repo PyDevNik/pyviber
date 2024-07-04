@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>pyviber.error_codes &#8212; pyviber 0.1 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=d1102ebc" />
+    <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css?v=12dfc556" />
+    <script src="../../_static/documentation_options.js?v=2709fde1"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <h1>Source code for pyviber.error_codes</h1><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">enum</span> <span class="kn">import</span> <span class="n">Enum</span>
+
+<div class="viewcode-block" id="InvalidUrlError">
+<a class="viewcode-back" href="../../pyviber.html#pyviber.error_codes.InvalidUrlError">[docs]</a>
+<span class="k">class</span> <span class="nc">InvalidUrlError</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;Error INVALID_URL (1): The webhook URL is not valid&quot;</span></div>
+
+
+<div class="viewcode-block" id="InvalidAuthTokenError">
+<a class="viewcode-back" href="../../pyviber.html#pyviber.error_codes.InvalidAuthTokenError">[docs]</a>
+<span class="k">class</span> <span class="nc">InvalidAuthTokenError</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;Error INVALID_AUTH_TOKEN (2): The authentication token is not valid&quot;</span></div>
+
+
+<div class="viewcode-block" id="BadDataError">
+<a class="viewcode-back" href="../../pyviber.html#pyviber.error_codes.BadDataError">[docs]</a>
+<span class="k">class</span> <span class="nc">BadDataError</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;Error BAD_DATA (3): There is an error in the request itself (missing comma, brackets, etc.)&quot;</span></div>
+
+
+<div class="viewcode-block" id="MissingDataError">
+<a class="viewcode-back" href="../../pyviber.html#pyviber.error_codes.MissingDataError">[docs]</a>
+<span class="k">class</span> <span class="nc">MissingDataError</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;Error MISSING_DATA (4): Some mandatory data is missing&quot;</span></div>
+
+
+<div class="viewcode-block" id="ReceiverNotRegisteredError">
+<a class="viewcode-back" href="../../pyviber.html#pyviber.error_codes.ReceiverNotRegisteredError">[docs]</a>
+<span class="k">class</span> <span class="nc">ReceiverNotRegisteredError</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;Error RECEIVER_NOT_REGISTERED (5): The receiver is not registered to Viber&quot;</span></div>
+
+
+<div class="viewcode-block" id="ReceiverNotSubscribedError">
+<a class="viewcode-back" href="../../pyviber.html#pyviber.error_codes.ReceiverNotSubscribedError">[docs]</a>
+<span class="k">class</span> <span class="nc">ReceiverNotSubscribedError</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;Error RECEIVER_NOT_SUBSCRIBED (6): The receiver is not subscribed to the account&quot;</span></div>
+
+
+<div class="viewcode-block" id="PublicAccountBlockedError">
+<a class="viewcode-back" href="../../pyviber.html#pyviber.error_codes.PublicAccountBlockedError">[docs]</a>
+<span class="k">class</span> <span class="nc">PublicAccountBlockedError</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;Error PUBLIC_ACCOUNT_BLOCKED (7): The account is blocked&quot;</span></div>
+
+
+<div class="viewcode-block" id="PublicAccountNotFoundError">
+<a class="viewcode-back" href="../../pyviber.html#pyviber.error_codes.PublicAccountNotFoundError">[docs]</a>
+<span class="k">class</span> <span class="nc">PublicAccountNotFoundError</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;Error PUBLIC_ACCOUNT_NOT_FOUND (8): The account associated with the token is not an account.&quot;</span></div>
+
+
+<div class="viewcode-block" id="PublicAccountSuspendedError">
+<a class="viewcode-back" href="../../pyviber.html#pyviber.error_codes.PublicAccountSuspendedError">[docs]</a>
+<span class="k">class</span> <span class="nc">PublicAccountSuspendedError</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;Error PUBLIC_ACCOUNT_SUSPENDED (9): The account is suspended&quot;</span></div>
+
+
+<div class="viewcode-block" id="WebhookNotSetError">
+<a class="viewcode-back" href="../../pyviber.html#pyviber.error_codes.WebhookNotSetError">[docs]</a>
+<span class="k">class</span> <span class="nc">WebhookNotSetError</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;Error WEBHOOK_NOT_SET (10): No webhook was set for the account&quot;</span></div>
+
+
+<div class="viewcode-block" id="ReceiverNoSuitableDeviceError">
+<a class="viewcode-back" href="../../pyviber.html#pyviber.error_codes.ReceiverNoSuitableDeviceError">[docs]</a>
+<span class="k">class</span> <span class="nc">ReceiverNoSuitableDeviceError</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;Error RECEIVER_NO_SUITABLE_DEVICE (11): The receiver is using a device or a Viber version that don’t support accounts&quot;</span></div>
+
+
+<div class="viewcode-block" id="TooManyRequestsError">
+<a class="viewcode-back" href="../../pyviber.html#pyviber.error_codes.TooManyRequestsError">[docs]</a>
+<span class="k">class</span> <span class="nc">TooManyRequestsError</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;Error TOO_MANY_REQUESTS (12): Rate control breach&quot;</span></div>
+
+
+<div class="viewcode-block" id="ApiVersionNotSupportedError">
+<a class="viewcode-back" href="../../pyviber.html#pyviber.error_codes.ApiVersionNotSupportedError">[docs]</a>
+<span class="k">class</span> <span class="nc">ApiVersionNotSupportedError</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;Error API_VERSION_NOT_SUPPORTED (13): Maximum supported account version by all user’s devices is less than the minApiVersion in the message&quot;</span></div>
+
+
+<div class="viewcode-block" id="IncompatibleWithVersionError">
+<a class="viewcode-back" href="../../pyviber.html#pyviber.error_codes.IncompatibleWithVersionError">[docs]</a>
+<span class="k">class</span> <span class="nc">IncompatibleWithVersionError</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;Error INCOMPATIBLE_WITH_VERSION (14): minApiVersion is not compatible to the message fields&quot;</span></div>
+
+
+<div class="viewcode-block" id="PublicAccountNotAuthorizedError">
+<a class="viewcode-back" href="../../pyviber.html#pyviber.error_codes.PublicAccountNotAuthorizedError">[docs]</a>
+<span class="k">class</span> <span class="nc">PublicAccountNotAuthorizedError</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;Error PUBLIC_ACCOUNT_NOT_AUTHORIZED (15): The account is not authorized&quot;</span></div>
+
+
+<div class="viewcode-block" id="InchatReplyMessageNotAllowedError">
+<a class="viewcode-back" href="../../pyviber.html#pyviber.error_codes.InchatReplyMessageNotAllowedError">[docs]</a>
+<span class="k">class</span> <span class="nc">InchatReplyMessageNotAllowedError</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;Error INCHAT_REPLY_MESSAGE_NOT_ALLOWED (16): Inline message not allowed&quot;</span></div>
+
+
+<div class="viewcode-block" id="PublicAccountIsNotInlineError">
+<a class="viewcode-back" href="../../pyviber.html#pyviber.error_codes.PublicAccountIsNotInlineError">[docs]</a>
+<span class="k">class</span> <span class="nc">PublicAccountIsNotInlineError</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;Error PUBLIC_ACCOUNT_IS_NOT_INLINE (17): The account is not inline&quot;</span></div>
+
+
+<div class="viewcode-block" id="NoPublicChatError">
+<a class="viewcode-back" href="../../pyviber.html#pyviber.error_codes.NoPublicChatError">[docs]</a>
+<span class="k">class</span> <span class="nc">NoPublicChatError</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;Error NO_PUBLIC_CHAT (18): Failed to post to public account. The bot is missing a Public Chat interface&quot;</span></div>
+
+
+<div class="viewcode-block" id="CannotSendBroadcastError">
+<a class="viewcode-back" href="../../pyviber.html#pyviber.error_codes.CannotSendBroadcastError">[docs]</a>
+<span class="k">class</span> <span class="nc">CannotSendBroadcastError</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;Error CANNOT_SEND_BROADCAST (19): Cannot send broadcast message&quot;</span></div>
+
+
+<div class="viewcode-block" id="BroadcastNotAllowedError">
+<a class="viewcode-back" href="../../pyviber.html#pyviber.error_codes.BroadcastNotAllowedError">[docs]</a>
+<span class="k">class</span> <span class="nc">BroadcastNotAllowedError</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;Error BROADCAST_NOT_ALLOWED (20): Attempt to send broadcast message from the bot&quot;</span></div>
+
+
+<div class="viewcode-block" id="UnsupportedCountryError">
+<a class="viewcode-back" href="../../pyviber.html#pyviber.error_codes.UnsupportedCountryError">[docs]</a>
+<span class="k">class</span> <span class="nc">UnsupportedCountryError</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;Error UNSUPPORTED_COUNTRY (21): The message sent is not supported in the destination country&quot;</span></div>
+
+
+<div class="viewcode-block" id="PaymentUnsupportedError">
+<a class="viewcode-back" href="../../pyviber.html#pyviber.error_codes.PaymentUnsupportedError">[docs]</a>
+<span class="k">class</span> <span class="nc">PaymentUnsupportedError</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;Error PAYMENT_UNSUPPORTED (22): The bot does not support payment messages&quot;</span></div>
+
+
+<div class="viewcode-block" id="FreeMessagesExceededError">
+<a class="viewcode-back" href="../../pyviber.html#pyviber.error_codes.FreeMessagesExceededError">[docs]</a>
+<span class="k">class</span> <span class="nc">FreeMessagesExceededError</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;Error FREE_MESSAGES_EXCEEDED (23): The bot has reached the monthly threshold&quot;</span></div>
+
+
+<div class="viewcode-block" id="NoBalanceError">
+<a class="viewcode-back" href="../../pyviber.html#pyviber.error_codes.NoBalanceError">[docs]</a>
+<span class="k">class</span> <span class="nc">NoBalanceError</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;Error NO_BALANCE (24): No balance for a billable bot&quot;</span></div>
+
+
+<div class="viewcode-block" id="GeneralError">
+<a class="viewcode-back" href="../../pyviber.html#pyviber.error_codes.GeneralError">[docs]</a>
+<span class="k">class</span> <span class="nc">GeneralError</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;Error GENERAL_ERROR: General error&quot;</span></div>
+
+
+<div class="viewcode-block" id="ErrorCode">
+<a class="viewcode-back" href="../../pyviber.html#pyviber.error_codes.ErrorCode">[docs]</a>
+<span class="k">class</span> <span class="nc">ErrorCode</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Error Codes Enum</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">InvalidUrlError</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">InvalidAuthTokenError</span> <span class="o">=</span> <span class="mi">2</span>
+    <span class="n">BadDataError</span> <span class="o">=</span> <span class="mi">3</span>
+    <span class="n">MissingDataError</span> <span class="o">=</span> <span class="mi">4</span>
+    <span class="n">ReceiverNotRegisteredError</span> <span class="o">=</span> <span class="mi">5</span>
+    <span class="n">ReceiverNotSubscribedError</span> <span class="o">=</span> <span class="mi">6</span>
+    <span class="n">PublicAccountBlockedError</span> <span class="o">=</span> <span class="mi">7</span>
+    <span class="n">PublicAccountNotFoundError</span> <span class="o">=</span> <span class="mi">8</span>
+    <span class="n">PublicAccountSuspendedError</span> <span class="o">=</span> <span class="mi">9</span>
+    <span class="n">WebhookNotSetError</span> <span class="o">=</span> <span class="mi">10</span>
+    <span class="n">ReceiverNoSuitableDeviceError</span> <span class="o">=</span> <span class="mi">11</span>
+    <span class="n">TooManyRequestsError</span> <span class="o">=</span> <span class="mi">12</span>
+    <span class="n">ApiVersionNotSupportedError</span> <span class="o">=</span> <span class="mi">13</span>
+    <span class="n">IncompatibleWithVersionError</span> <span class="o">=</span> <span class="mi">14</span>
+    <span class="n">PublicAccountNotAuthorizedError</span> <span class="o">=</span> <span class="mi">15</span>
+    <span class="n">InchatReplyMessageNotAllowedError</span> <span class="o">=</span> <span class="mi">16</span>
+    <span class="n">PublicAccountIsNotInlineError</span> <span class="o">=</span> <span class="mi">17</span>
+    <span class="n">NoPublicChatError</span> <span class="o">=</span> <span class="mi">18</span>
+    <span class="n">CannotSendBroadcastError</span> <span class="o">=</span> <span class="mi">19</span>
+    <span class="n">BroadcastNotAllowedError</span> <span class="o">=</span> <span class="mi">20</span>
+    <span class="n">UnsupportedCountryError</span> <span class="o">=</span> <span class="mi">21</span>
+    <span class="n">PaymentUnsupportedError</span> <span class="o">=</span> <span class="mi">22</span>
+    <span class="n">FreeMessagesExceededError</span> <span class="o">=</span> <span class="mi">23</span>
+    <span class="n">NoBalanceError</span> <span class="o">=</span> <span class="mi">24</span>
+    <span class="n">GeneralError</span> <span class="o">=</span> <span class="mi">25</span></div>
+
+</pre></div>
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../index.html">pyviber</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  <li><a href="../index.html">Module code</a><ul>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2024, PyDevNik.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 7.3.7</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 0.7.16</a>
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>
